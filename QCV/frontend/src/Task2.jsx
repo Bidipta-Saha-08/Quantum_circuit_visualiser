@@ -20,7 +20,7 @@ function Task2() {
         };
 
         try {
-            const response = await fetch("https://quantum-circuit-visualiser.onrender.com", {
+            const response = await fetch("https://quantum-circuit-visualiser.onrender.com/dynamics", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

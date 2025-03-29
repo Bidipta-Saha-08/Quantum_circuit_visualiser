@@ -56,7 +56,7 @@ function Task1() {
       console.log(requestBody);
   
       try {
-        const response = await fetch("https://quantum-circuit-visualiser.onrender.com", {
+        const response = await fetch("https://quantum-circuit-visualiser.onrender.com/circuit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
