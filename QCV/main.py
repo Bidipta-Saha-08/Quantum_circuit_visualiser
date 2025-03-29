@@ -81,7 +81,7 @@ async def get_circuit_image(request: CircuitRequest):
         await loop.run_in_executor(None, lambda: qc.draw(file_path=image_path, file_type="png", save=True))
 
         # Return the static image URL
-        return JSONResponse({"image_url": f"http://localhost:8000/{image_path}"})
+        return JSONResponse({"image_url": f"https://quantum-circuit-visualiser.onrender.com/{image_path}"})
 
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
@@ -124,7 +124,7 @@ async def get_dynamics_image(request: dict):
         plt.close()
 
         # Return the static image URL
-        return JSONResponse({"image_url": f"http://localhost:8000/{image_path}"})
+        return JSONResponse({"image_url": f"https://quantum-circuit-visualiser.onrender.com/{image_path}"})
 
     except Exception as e:
         return JSONResponse({"error": str(e)}, status_code=500)
