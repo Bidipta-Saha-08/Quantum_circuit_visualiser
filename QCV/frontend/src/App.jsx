@@ -5,6 +5,7 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Task1/>} />
         <Route path="/task1" element={<Task1/>} />
         <Route path="/task2" element={<Task2/>} />
         <Route path="*" element={<>Not Found</>} />
