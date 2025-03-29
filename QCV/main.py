@@ -42,6 +42,11 @@ class Gate(BaseModel):
 class CircuitRequest(BaseModel):
     qubit_no: int
     gates: list[Gate]
+    
+@app.get("/")
+async def root():
+    """Root endpoint."""
+    return {"message": "Hello, World!"}
 
 @app.post("/circuit")
 async def get_circuit_image(request: CircuitRequest):
